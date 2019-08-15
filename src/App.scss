@@ -1,0 +1,77 @@
+@import "styles/reset";
+@import "styles/fonts";
+@import 'styles/colors';
+@import "styles/arrows";
+
+html, body {
+  font-family: $font-stack;
+  color: $font-color;
+}
+
+.header {
+  border-bottom: 3px solid $light-grey;
+  margin-bottom: 30px;
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.product-list {
+  margin-left: 10px;
+  .product {
+    display: flex;
+    margin-bottom: 30px;
+
+    .product-photo {
+      width: 100px;
+      height: 100px;
+      background: $yellow;
+      margin-right: 15px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-direction: column;
+
+      .vote-container {
+        display: flex;
+        align-items: center;
+        .up-vote {
+          @include arrow-up($blue, 10px);
+          margin-right: 10px;
+        }
+        .votes {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      .product-info {
+        margin: 10px 0 6px;
+        .product-name {
+          font-size: 16px;
+          font-weight: 600;
+          color: $blue;
+          margin: 0;
+        }
+        .product-desc {
+          font-size: 14px;
+          font-weight: 300;
+          margin: 0;
+        }
+      }
+
+      .submiter-container {
+        display: flex;
+        small {
+          font-size: 12px;
+          color: $light-grey;
+        }
+        .avatar {
+          width: 25px;
+        }
+      }
+    }
+  }
+}
